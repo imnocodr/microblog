@@ -1,5 +1,6 @@
 flask
 gunicorn
+Flask-WTF
 Flask-SQLAlchemy
 Flask-migrate
 Flask-login
