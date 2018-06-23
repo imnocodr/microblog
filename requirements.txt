@@ -1,0 +1,5 @@
+flask
+gunicorn
+Flask-SQLAlchemy
+Flask-migrate
+Flask-login
