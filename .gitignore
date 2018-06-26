@@ -2,3 +2,4 @@ __pycache__
 venv
 .vscode
 DS_STORE
+log/microblog.log
