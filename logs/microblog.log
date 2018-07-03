@@ -1,70 +1,92 @@
-2018-06-26 14:54:17,061 ERROR: Exception on /edit_profile [POST] [in /Users/ripzy/Projects/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2018-07-03 16:35:21,089 ERROR: Exception on /user/sam [GET] [in /mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
-  File "/Users/ripzy/Projects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/ripzy/Projects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1816, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "/Users/ripzy/Projects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1831, in finalize_request
-    response = self.make_response(rv)
-  File "/Users/ripzy/Projects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1957, in make_response
-    'The view function did not return a valid response. The'
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-2018-06-26 14:54:48,915 ERROR: Exception on /edit_profile [POST] [in /Users/ripzy/Projects/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/app/routes.py", line 102, in user
+    posts = user.post.order_by(Post.timestamp.desc()).all()
+AttributeError: 'User' object has no attribute 'post'
+2018-07-03 16:35:47,959 INFO: Microblog startup [in /mnt/c/Users/Loradmin/Projects/microblog/app/__init__.py:47]
+2018-07-03 16:39:47,918 INFO: Microblog startup [in /mnt/c/Users/Loradmin/Projects/microblog/app/__init__.py:47]
+2018-07-03 16:41:00,784 INFO: Microblog startup [in /mnt/c/Users/Loradmin/Projects/microblog/app/__init__.py:47]
+2018-07-03 16:42:47,966 INFO: Microblog startup [in /mnt/c/Users/Loradmin/Projects/microblog/app/__init__.py:47]
+2018-07-03 16:43:18,365 ERROR: Exception on /user/sam [GET] [in /mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
-  File "/Users/ripzy/Projects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/ripzy/Projects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1816, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "/Users/ripzy/Projects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1831, in finalize_request
-    response = self.make_response(rv)
-  File "/Users/ripzy/Projects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1957, in make_response
-    'The view function did not return a valid response. The'
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-2018-06-26 14:55:11,873 ERROR: Exception on /edit_profile [POST] [in /Users/ripzy/Projects/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/app/routes.py", line 104, in user
+    next_url = url_for('user', page=posts.next_num) if posts.next_num else None
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['page']. Did you forget to specify values ['username']?
+2018-07-03 16:45:02,563 INFO: Microblog startup [in /mnt/c/Users/Loradmin/Projects/microblog/app/__init__.py:47]
+2018-07-03 16:45:09,470 ERROR: Exception on /user/sam [GET] [in /mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
-  File "/Users/ripzy/Projects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/ripzy/Projects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1816, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "/Users/ripzy/Projects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1831, in finalize_request
-    response = self.make_response(rv)
-  File "/Users/ripzy/Projects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1957, in make_response
-    'The view function did not return a valid response. The'
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-2018-06-26 15:03:04,528 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-06-26 15:37:10,228 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 12:33:26,302 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 12:33:36,874 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 12:35:38,422 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 12:35:58,316 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 12:36:08,657 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 12:36:39,332 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 12:37:20,281 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 12:37:25,242 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 12:56:24,756 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 12:58:03,806 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 12:58:53,400 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 12:59:03,729 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 12:59:09,281 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 12:59:39,549 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 12:59:50,858 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 13:05:42,293 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 14:30:16,268 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 14:35:18,781 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 14:36:12,014 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 14:41:19,218 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 14:51:48,771 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 14:57:10,034 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 15:26:46,741 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 15:34:13,127 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 15:35:16,501 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 15:36:57,678 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 15:37:26,967 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 15:42:45,775 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 15:43:15,441 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 15:43:23,990 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 15:43:31,069 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 15:43:38,726 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 15:43:41,691 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 16:08:34,056 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
-2018-07-02 16:08:44,331 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:47]
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/app/routes.py", line 104, in user
+    next_url = url_for('user', username=posts.author, page=posts.next_num) if posts.next_num else None
+AttributeError: 'Pagination' object has no attribute 'author'
+2018-07-03 16:45:11,487 ERROR: Exception on /user/sam [GET] [in /mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/mnt/c/Users/Loradmin/Projects/microblog/app/routes.py", line 104, in user
+    next_url = url_for('user', username=posts.author, page=posts.next_num) if posts.next_num else None
+AttributeError: 'Pagination' object has no attribute 'author'
+2018-07-03 16:46:00,602 INFO: Microblog startup [in /mnt/c/Users/Loradmin/Projects/microblog/app/__init__.py:47]
