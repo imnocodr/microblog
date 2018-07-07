@@ -1,92 +1,64 @@
-2018-07-03 16:35:21,089 ERROR: Exception on /user/sam [GET] [in /mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py:1761]
+2018-07-07 17:47:41,197 ERROR: Exception on /reset_password_request [GET] [in /Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
     raise value
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/app/routes.py", line 102, in user
-    posts = user.post.order_by(Post.timestamp.desc()).all()
-AttributeError: 'User' object has no attribute 'post'
-2018-07-03 16:35:47,959 INFO: Microblog startup [in /mnt/c/Users/Loradmin/Projects/microblog/app/__init__.py:47]
-2018-07-03 16:39:47,918 INFO: Microblog startup [in /mnt/c/Users/Loradmin/Projects/microblog/app/__init__.py:47]
-2018-07-03 16:41:00,784 INFO: Microblog startup [in /mnt/c/Users/Loradmin/Projects/microblog/app/__init__.py:47]
-2018-07-03 16:42:47,966 INFO: Microblog startup [in /mnt/c/Users/Loradmin/Projects/microblog/app/__init__.py:47]
-2018-07-03 16:43:18,365 ERROR: Exception on /user/sam [GET] [in /mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py:1761]
+  File "/Users/ripzy/Projects/microblog/app/routes.py", line 169, in reset_password_request
+    title='Reset Password', form=form)
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: reset_password_request.html
+2018-07-07 17:48:54,814 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:49]
+2018-07-07 17:49:02,939 ERROR: Exception on /reset_password_request [GET] [in /Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
     raise value
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/app/routes.py", line 104, in user
-    next_url = url_for('user', page=posts.next_num) if posts.next_num else None
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/helpers.py", line 356, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 2061, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/helpers.py", line 345, in url_for
-    force_external=external)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 1776, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['page']. Did you forget to specify values ['username']?
-2018-07-03 16:45:02,563 INFO: Microblog startup [in /mnt/c/Users/Loradmin/Projects/microblog/app/__init__.py:47]
-2018-07-03 16:45:09,470 ERROR: Exception on /user/sam [GET] [in /mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/app/routes.py", line 104, in user
-    next_url = url_for('user', username=posts.author, page=posts.next_num) if posts.next_num else None
-AttributeError: 'Pagination' object has no attribute 'author'
-2018-07-03 16:45:11,487 ERROR: Exception on /user/sam [GET] [in /mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/mnt/c/Users/Loradmin/Projects/microblog/app/routes.py", line 104, in user
-    next_url = url_for('user', username=posts.author, page=posts.next_num) if posts.next_num else None
-AttributeError: 'Pagination' object has no attribute 'author'
-2018-07-03 16:46:00,602 INFO: Microblog startup [in /mnt/c/Users/Loradmin/Projects/microblog/app/__init__.py:47]
+  File "/Users/ripzy/Projects/microblog/app/routes.py", line 169, in reset_password_request
+    title='Reset Password', form=form)
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: reset_password_request.html
+2018-07-07 17:50:32,922 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:49]
