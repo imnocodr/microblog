@@ -62,3 +62,26 @@ Traceback (most recent call last):
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: reset_password_request.html
 2018-07-07 17:50:32,922 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:49]
+2018-07-07 18:05:08,399 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:49]
+2018-07-07 18:11:28,733 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:49]
+2018-07-07 18:11:45,752 ERROR: Exception on /reset_password_request [POST] [in /Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ripzy/Projects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/ripzy/Projects/microblog/app/routes.py", line 165, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/ripzy/Projects/microblog/app/email.py", line 14, in send_password_reset_email
+    sender=app.config['ADMINS'][0],
+NameError: name 'app' is not defined
+2018-07-07 18:18:49,221 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:49]
+2018-07-07 18:24:16,772 INFO: Microblog startup [in /Users/ripzy/Projects/microblog/app/__init__.py:49]
